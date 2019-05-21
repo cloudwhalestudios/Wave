@@ -1,6 +1,4 @@
-﻿
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,24 +32,12 @@ public class ObstacleManager : MonoBehaviour
         }
     }
 
-
-
     public void InstantiateObstacle()
     {
         ObstacleCount = Obstacles.Length;
         int FirstObstacleNumber = Random.Range(0, ObstacleCount);
-        GameObject NewObs = Instantiate(Obstacles[4], new Vector3(0, ObstacleIndex * DistanceToNext), Quaternion.identity); // Change Obstacles[0] to Obstacles[FirstObstacleNumber]
+        GameObject NewObs = Instantiate(Obstacles[4], new Vector3(0, ObstacleIndex * DistanceToNext), Quaternion.identity); // Change to Obstacles[FirstObstacleNumber]
         NewObs.transform.SetParent(transform);
         ObstacleIndex++;
     }
-
-
-
-
-
-
-
-
-
-
 }

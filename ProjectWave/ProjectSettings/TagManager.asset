@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Checkpoint
   - CheckpointDetector
+  - Triangle
+  - MeterBar
   layers:
   - Default
   - TransparentFX

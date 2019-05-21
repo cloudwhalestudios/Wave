@@ -39,9 +39,7 @@ public class GameManager : MonoBehaviour
         }
         Application.targetFrameRate = 60;
 
-
         Time.timeScale = 1.0f;
-
 
         BestScoreTextTMPro.text = PlayerPrefs.GetInt("BestScore", 0).ToString();
         StartCoroutine(FadeIn());
