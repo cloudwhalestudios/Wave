@@ -138,6 +138,7 @@ public class CheckPointDetector : MonoBehaviour
  * 
  * - Add score when progressing upwards.
  * 
+ * - Check if checkpoint collide with obstacles / Smaller level courses with checkpoint
  * 
  * OPTIONAL
  * ~ Curve that maintains the x force ()
