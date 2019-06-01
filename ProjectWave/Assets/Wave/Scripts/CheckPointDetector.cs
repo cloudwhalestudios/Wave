@@ -142,7 +142,6 @@ public class CheckPointDetector : MonoBehaviour
  * - Fix out of index error (Reproduce it) Had to do with the list/array.
  * - Fix player always going left when arrived at checkpoint.
  * 
- * - Add score when progressing upwards.
  * 
  * - Smaller level courses with checkpoint
  * 
