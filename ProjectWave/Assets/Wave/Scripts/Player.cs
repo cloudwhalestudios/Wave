@@ -137,6 +137,8 @@ public class Player : MonoBehaviour
             GameManagerObj.GetComponent<GameManager>().Gameover();
 
             source.PlayOneShot(DeadClip, 1);
+
+            print("player died by obstacle");
         }
 
         if (other.gameObject.tag == "CheckpointDetector")
