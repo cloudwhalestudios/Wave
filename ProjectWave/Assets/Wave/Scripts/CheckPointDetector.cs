@@ -65,6 +65,12 @@ public class CheckPointDetector : MonoBehaviour
             //Add something like PlayerHasArrived = true;
             return;
         }
+
+        if (other.gameObject.tag == "Obstacle")
+        {
+            //Move checkpoint out of the obstacle!
+            return;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -138,7 +144,7 @@ public class CheckPointDetector : MonoBehaviour
  * 
  * - Add score when progressing upwards.
  * 
- * - Check if checkpoint collide with obstacles / Smaller level courses with checkpoint
+ * - Smaller level courses with checkpoint
  * 
  * OPTIONAL
  * ~ Curve that maintains the x force ()

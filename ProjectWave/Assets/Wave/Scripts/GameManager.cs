@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public int NormalScore = 1;
+    public int ExtraScore = 5;
+
     int score = 0;
     public TextMeshProUGUI CurrentScoreTextTMPro;
     public TextMeshProUGUI BestScoreTextTMPro;
@@ -75,9 +78,21 @@ public class GameManager : MonoBehaviour
 
     public void addScore()
     {
-
         AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.Score);
-        score++;
+        score = score + NormalScore;
+        CurrentScoreTextTMPro.text = score.ToString();
+        if (score > PlayerPrefs.GetInt("BestScore", 0))
+        {
+            PlayerPrefs.SetInt("BestScore", score);
+            BestScoreTextTMPro.text = PlayerPrefs.GetInt("BestScore", 0).ToString();
+            AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.Highscore);
+        }
+    }
+
+    public void addExtraScore()
+    {
+        AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.Score);
+        score = score + ExtraScore;
         CurrentScoreTextTMPro.text = score.ToString();
         if (score > PlayerPrefs.GetInt("BestScore", 0))
         {

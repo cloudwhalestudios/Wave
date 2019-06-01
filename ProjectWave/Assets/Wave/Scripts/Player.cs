@@ -128,17 +128,6 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Item_ColorChange")
-        {
-            Destroy(Instantiate(fx_ColorChange, other.gameObject.transform.position, Quaternion.identity), 0.5f);
-            Destroy(other.gameObject.transform.parent.gameObject);
-            SetBackgroundColor();
-
-            GameManagerObj.GetComponent<GameManager>().addScore();
-
-            source.PlayOneShot(ItemClip, 1);
-        }
-
         if (other.gameObject.tag == "Obstacle" && isDead == false)
         {
             isDead = true;
@@ -159,6 +148,17 @@ public class Player : MonoBehaviour
         {
             GameManagerObj.GetComponent<GameManager>().addScore();
             return;
+        }
+
+        if (other.gameObject.tag == "Item_ColorChange")
+        {
+            Destroy(Instantiate(fx_ColorChange, other.gameObject.transform.position, Quaternion.identity), 0.5f);
+            Destroy(other.gameObject.transform.parent.gameObject);
+            SetBackgroundColor();
+
+            GameManagerObj.GetComponent<GameManager>().addExtraScore();
+
+            source.PlayOneShot(ItemClip, 1);
         }
     }
 
