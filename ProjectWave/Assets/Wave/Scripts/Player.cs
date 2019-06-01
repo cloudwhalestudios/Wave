@@ -154,6 +154,12 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        
+        if (other.gameObject.tag == "MeterBar")
+        {
+            GameManagerObj.GetComponent<GameManager>().addScore();
+            return;
+        }
     }
 
     void StopPlayer()
