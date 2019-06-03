@@ -653,8 +653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb29e96c86f45baaa51c3c25b1e2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalScore: 1
-  ExtraScore: 5
+  NormalScore: 5
+  ExtraScore: 15
   CurrentScoreTextTMPro: {fileID: 1285935751}
   BestScoreTextTMPro: {fileID: 574677777}
   GameOverPanel: {fileID: 707117801}
