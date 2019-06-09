@@ -137,17 +137,16 @@ public class CheckPointDetector : MonoBehaviour
 }
 
 /*
+ * - Fix player always going left when arrived at checkpoint.
  * 
  * - Checkpoints to prefabs (PLAYTEST)
  * - Fix out of index error (Reproduce it) Had to do with the list/array.
- * - Fix player always going left when arrived at checkpoint.
+ * 
+ * - Checkpoints stuck in eachother need to move
  * 
  * 
- * - Smaller level courses with checkpoint
  * 
  * OPTIONAL
  * ~ Curve that maintains the x force ()
- * ~ Instead of checkpoints use heightlines (5m, 10m etc.)
- * ~ Change score system (E.g. white dots 10points and every 2m you travel you gain 1 points whatever
  *
  */

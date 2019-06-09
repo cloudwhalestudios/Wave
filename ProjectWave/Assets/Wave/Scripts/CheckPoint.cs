@@ -23,4 +23,12 @@ public class CheckPoint : MonoBehaviour
             selectedVisual.enabled = false;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Checkpoint")
+        {
+            print("Checkpoint stuck in each other");
+        }
+    }
 }
