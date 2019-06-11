@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
         {
             activeMoveCoroutine = StartCoroutine(MoveToCheckpoint());
         }
-        else if (!isMoving)
+        /*else if (!isMoving)
         {
             if (rb.velocity.y > 0)
             {
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
             }
-        }
+        }*/
 
     }
 
@@ -112,12 +112,22 @@ public class Player : MonoBehaviour
         TheCheckpointDetector.FreezeCurrentSelection();
         var currentCheckpointPosition = new Vector3(TheCheckpointDetector.CurrentSelectedCheckpointPosition.x, TheCheckpointDetector.CurrentSelectedCheckpointPosition.y, transform.position.z);
         var distanceCheckpoint = Vector3.Distance(currentCheckpointPosition, transform.position);
+        var xDir = currentCheckpointPosition.x - transform.position.x;
         while (transform.position != currentCheckpointPosition)
         {
             transform.position = Vector2.MoveTowards(transform.position, currentCheckpointPosition, transitionSpeed * Time.deltaTime); //(Time.deltaTime / transitionSpeed) * distanceCheckpoint)
             yield return new WaitForEndOfFrame();
         }
+        print("xDir: " + xDir);
+        print("previous:" + angle);
+        print("pos: " + transform.position.x);
         angle = Mathf.Acos(transform.position.x / (GameManagerObj.GetComponent<DisplayManager>().RIGHT * 0.9f));
+        if (xDir > 0)
+        {
+            angle += Mathf.Deg2Rad * 180f;
+        }
+        print("new: " + angle);
+
         hasArrivedAtCheckpoint = true;
         isMoving = false;
         print("Has arrived !!");

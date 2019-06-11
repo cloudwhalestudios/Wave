@@ -33,12 +33,12 @@ public class CheckPoint : MonoBehaviour
     void ForEveryCheckpoint()
     {
         CurrentPosition = this.gameObject.transform.position;
-        print(CurrentPosition);
+        //print(CurrentPosition);
         for (var i = 0; i < Checkpoints.Length; i++)
         {
             if (this.gameObject.transform.position == Checkpoints[i].gameObject.transform.position && Checkpoints[i] != this.gameObject)
             {
-                print(Checkpoints[i].gameObject.transform.position);
+                //print(Checkpoints[i].gameObject.transform.position);
             }
         }
     }

@@ -91,7 +91,7 @@ public class CheckPointDetector : MonoBehaviour
 
     IEnumerator CycleCheckpoints()
     {
-        print("Cycling Checkpoints");
+        //print("Cycling Checkpoints");
         CheckpointsAllCycled = false;
         Check = new CheckPoint[CurrentCheckpoints.Count];
         CurrentCheckpointsPositions = new Vector2[CurrentCheckpoints.Count];
