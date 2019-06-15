@@ -137,7 +137,7 @@ public class CheckPointDetector : MonoBehaviour
 }
 
 /*
- * - Fix player always going left when arrived at checkpoint.
+ *
  * 
  * - Checkpoints to prefabs (PLAYTEST)
  * - Fix out of index error (Reproduce it) Had to do with the list/array.
