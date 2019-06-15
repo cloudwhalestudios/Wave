@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void addExtraScore()
     {
-        AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.Score);
+        AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.Score2);
         score = score + ExtraScore;
         CurrentScoreTextTMPro.text = score.ToString();
         if (score > PlayerPrefs.GetInt("BestScore", 0))

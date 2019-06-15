@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource BassCrashHighscore;
     public AudioSource Highscore;
     public AudioSource Score;
+    public AudioSource Score2;
     public AudioSource Alternate;
     public AudioSource SplashScreen;
     public AudioSource UI;
