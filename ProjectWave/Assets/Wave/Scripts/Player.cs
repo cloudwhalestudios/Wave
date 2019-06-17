@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public bool usePreferences = true;
     public KeyCode primaryKey;
     public KeyCode secondaryKey;
+    public float indicateTime = 2f;
+
 
     [Space]
     public GameObject fx_Dead;
@@ -45,7 +47,6 @@ public class Player : MonoBehaviour
 
     private Coroutine activeMoveCoroutine;
     private bool isMoving = false;
-    
 
     void Awake()
     {
@@ -62,6 +63,17 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        if (usePreferences && PlatformPreferences.Current.Keys != null)
+        {
+            primaryKey = PlatformPreferences.Current.Keys[0];
+            secondaryKey = PlatformPreferences.Current.Keys[1];
+        }
+
+        if (usePreferences && PlatformPreferences.Current.ReactionTime > 0)
+        {
+            indicateTime = PlatformPreferences.Current.ReactionTime;
+        }
+
         GameManagerObj = GameObject.Find("GameManager");
         rb = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
@@ -72,12 +84,6 @@ public class Player : MonoBehaviour
 
         hueValue = Random.Range(0, 10) / 10.0f;
         SetBackgroundColor();
-
-        if (usePreferences)
-        {
-            primaryKey = PlatformPreferences.Current.Keys[0];
-            secondaryKey = PlatformPreferences.Current.Keys[1];
-        }
     }
 
 
