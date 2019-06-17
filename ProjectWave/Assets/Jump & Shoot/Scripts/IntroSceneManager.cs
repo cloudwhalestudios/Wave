@@ -4,16 +4,38 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class IntroSceneManager : MonoBehaviour {
-    void Start()
+
+    [Header("Boot Options")]
+    public float minBootDelay = 0f;
+
+    bool finishedLoading = false;
+
+
+    private void Start()
     {
-        StartCoroutine(GoToMainScene());
+        //AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.Launch);
+        StartCoroutine(StartNextScene());
+
+        // Load the platform preferences
+        LoadUserSetup();
     }
 
-    IEnumerator GoToMainScene()
+    private void LoadUserSetup()
     {
-        AudioManager.Instance.PlaySoundNormally(AudioManager.Instance.SplashScreen);
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("MainMenuSceneWave");
+        BootLoader.FetchPreferences();
+        finishedLoading = true;
+    }
+
+    IEnumerator StartNextScene()
+    {
+        yield return new WaitForSeconds(minBootDelay);
+
+        if (!finishedLoading)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
+        SceneManager.LoadScene("MainMenu");
         yield break;
     }
 }

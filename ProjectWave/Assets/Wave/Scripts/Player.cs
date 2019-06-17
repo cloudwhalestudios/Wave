@@ -7,6 +7,12 @@ public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
+    [Header("Controls")]
+    public bool usePreferences = true;
+    public KeyCode primaryKey;
+    public KeyCode secondaryKey;
+
+    [Space]
     public GameObject fx_Dead;
     public GameObject fx_ColorChange;
     GameObject GameManagerObj;
@@ -39,6 +45,7 @@ public class Player : MonoBehaviour
 
     private Coroutine activeMoveCoroutine;
     private bool isMoving = false;
+    
 
     void Awake()
     {
@@ -65,6 +72,12 @@ public class Player : MonoBehaviour
 
         hueValue = Random.Range(0, 10) / 10.0f;
         SetBackgroundColor();
+
+        if (usePreferences)
+        {
+            primaryKey = PlatformPreferences.Current.Keys[0];
+            secondaryKey = PlatformPreferences.Current.Keys[1];
+        }
     }
 
 
@@ -86,22 +99,10 @@ public class Player : MonoBehaviour
             angle += Time.deltaTime * Xspeed;
         }
 
-        if (Input.GetMouseButton(0) && hasArrivedAtCheckpoint)
+        if (Input.GetKeyDown(primaryKey) && hasArrivedAtCheckpoint)
         {
             activeMoveCoroutine = StartCoroutine(MoveToCheckpoint());
         }
-        /*else if (!isMoving)
-        {
-            if (rb.velocity.y > 0)
-            {
-                rb.AddForce(new Vector2(0, -YdecelerationForce));
-            }
-            else
-            {
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-            }
-        }*/
-
     }
 
     IEnumerator MoveToCheckpoint()
