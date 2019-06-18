@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Marce\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Marce\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_ProjectWave.1794354861.00" t="ExcludeRecursive" />
+    <e p="D:\School\Cloudwhale Git\Wave\ProjectWave" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ButtonContainer.cs" t="Include" />
+        <e p="Font" t="Include">
+          <e p="LemonMilk" t="Include">
+            <e p="lemon_milk" t="Include">
+              <e p="README.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="MainMenuController.cs" t="Include" />
+        <e p="MainSceneController.cs" t="Include" />
+        <e p="ObjectDeletion.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="BootLoader.cs" t="Include" />
+          <e p="IntroSceneManager.cs" t="Include" />
+          <e p="MainMenuSceneManager.cs" t="Include" />
+          <e p="MainSceneManager.cs" t="Include" />
+          <e p="PlatformPreferences.cs" t="Include" />
+          <e p="WebGL" t="Include">
+            <e p="Config.cs" t="Include" />
+            <e p="JSLib.cs" t="Include" />
+            <e p="PlayerPreferenceManager.cs" t="Include" />
+            <e p="WebGLParameters.cs" t="Include" />
+            <e p="WebGLRedirect.cs" t="Include" />
+            <e p="WebGLSite.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Wave" t="Include">
+          <e p="Materials" t="Include">
+            <e p="RGB.shader" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="CameraShake.cs" t="Include" />
+            <e p="CheckPoint.cs" t="Include" />
+            <e p="CheckPointDetector.cs" t="Include" />
+            <e p="DisplayManager.cs" t="Include" />
+            <e p="FollowPlayer.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="MeterManager.cs" t="Include" />
+            <e p="ObjectDeletionScript.cs" t="Include" />
+            <e p="ObstacleManager.cs" t="Include" />
+            <e p="ObstacleMovement.cs" t="Include" />
+            <e p="ObstacleParent.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+          </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Resources" t="Include">
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+                <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+                <e p="TMP_Bitmap.shader" t="Include" />
+                <e p="TMP_SDF Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface.shader" t="Include" />
+                <e p="TMP_SDF.shader" t="Include" />
+                <e p="TMP_Sprite.shader" t="Include" />
+                <e p="TMPro.cginc" t="Include" />
+                <e p="TMPro_Properties.cginc" t="Include" />
+                <e p="TMPro_Surface.cginc" t="Include" />
+              </e>
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="ProjectWave.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
