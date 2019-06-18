@@ -1408,6 +1408,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 351099168448977382, guid: e0039446f698eed44afb997ccc439c45,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 6943117973071904318, guid: e0039446f698eed44afb997ccc439c45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1462,11 +1467,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 351099168448977382, guid: e0039446f698eed44afb997ccc439c45,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint
       objectReference: {fileID: 0}
     - target: {fileID: 1033841584482574462, guid: e0039446f698eed44afb997ccc439c45,
         type: 3}
@@ -2865,7 +2865,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!224 &1675184343
 RectTransform:
@@ -3045,6 +3045,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 351099168448977382, guid: e0039446f698eed44afb997ccc439c45,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 351099168448977382, guid: e0039446f698eed44afb997ccc439c45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6943117973071904318, guid: e0039446f698eed44afb997ccc439c45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3099,16 +3109,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 351099168448977382, guid: e0039446f698eed44afb997ccc439c45,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 351099168448977382, guid: e0039446f698eed44afb997ccc439c45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4679733249182844855, guid: e0039446f698eed44afb997ccc439c45,
         type: 3}
